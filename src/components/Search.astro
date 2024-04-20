@@ -1,0 +1,35 @@
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+    var inputElement = document.getElementById('myInput');
+    inputElement.addEventListener('keyup', function() {
+        var filter, ul, li, a, i, txtValue;
+        filter = inputElement.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+    
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    });
+});
+
+
+
+	</script>
+
+
+<div class="flex flex-col w-1/2 mx-auto">
+    <h3 class="text-5xl font-bold my-5">Search blogs</h3>
+    <input class="rounded-md py-2 px-0.5" type="text" id="myInput" placeholder="Search for names..">
+    <ul id="myUL" class="rounded-md w-full">
+        <li><a class="w-full p-2 my-1 text-xl font-semibold " href="/hawaii">Hawaii</a></li>
+        <li><a class="w-full p-2 my-1 text-xl font-semibold " href="/miami">Miami</a></li>
+        <li><a class="w-full p-2 my-1 text-xl font-semibold " href="/albania">Albania</a></li>
+    </ul>
+</div>

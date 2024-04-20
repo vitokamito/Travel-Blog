@@ -1,0 +1,40 @@
+---
+import Navbar from "../components/Navbar.astro";
+---
+<main>
+<Navbar />
+<div class="flex justify-center flex-col items-center">
+    <p class="text-7xl">Contact me</p>
+    <form method="POST" class="mx-3 flex flex-col md:w-2/3 w-full">
+        <!-- Email and Name -->
+        <div class="flex flex-col xl:flex-row">
+            <div class="xl:w-full xl:mr-5 m-2">
+                <label class="text-sm text-slate-300 my-2" for="name">Name</label>
+                <input
+                    placeholder="Name"
+                    class=" placeholder:text-slate-800/70 appearance-none ring-2 ring-slate-500 p-2 focus:outline-none focus:ring-slate-200/80 focus:placeholder:opacity-0 placeholder:transition-all placeholder:duration-200 rounded-lg  drop-shadow-lg text-black w-full"
+                />
+            </div>
+            <div class="xl:w-full m-2">
+                <label class="text-sm text-slate-300 my-2" for="email">Email</label>
+                <input
+                    placeholder="example@gmail.com"
+                    class=" placeholder:text-slate-800/70 appearance-none ring-2 ring-slate-500 p-2 focus:outline-none focus:ring-slate-200/80 focus:placeholder:opacity-0 placeholder:transition-all placeholder:duration-200 rounded-lg drop-shadow-lg text-black w-full"
+                />
+            </div>
+        </div>
+
+        <div class="flex flex-col mt-3 m-2">
+            <label class="text-sm text-slate-300 my-1" for="message"
+                >Message</label
+            >
+            <textarea
+                placeholder="Your message here"
+                class=" placeholder:text-slate-800/70 appearance-none ring-2 ring-slate-500 p-2 focus:outline-none focus:ring-slate-200/80 focus:placeholder:opacity-0 placeholder:transition-all placeholder:duration-20 rounded-lg  drop-shadow-lg text-black h-40"
+            />
+        </div>
+        <button
+            class="p-2 text-black bg-gray-300 rounded-lg">Get in Touch</button
+        >
+    </form>
+</div></main>

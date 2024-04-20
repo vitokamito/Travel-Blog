@@ -1,0 +1,15 @@
+---
+const { title, slug } = Astro.props
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+let newTitle = capitalizeFirstLetter(title)
+
+
+---
+
+
+<a href={slug} class="flex justify-between items-center hover:bg-gray-300/60 p-3 bg-gray-300/30 rounded-md">
+    <p class="text-5xl">{newTitle}</p>
+    <img class="w-10" src="arrow.svg" alt="">
+</a>
